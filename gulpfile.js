@@ -12,7 +12,7 @@ var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 
 gulp.task('styles', function () {
-    return gulp.src('src/sass/main.scss')
+    return gulp.src('src/scss/main.scss')
         .pipe(sass())
         .pipe(concat('main.css'))
         .pipe(autoprefixer({
@@ -52,7 +52,7 @@ gulp.task('html', function(){
 });
 
 gulp.task('watch', function () {
-    gulp.watch('src/sass/*.scss', ['styles']);
+    gulp.watch('src/scss/*.scss', ['styles']);
     gulp.watch('src/js/*.js', ['scripts']);
     gulp.watch('index.html', ['html']);
 });
