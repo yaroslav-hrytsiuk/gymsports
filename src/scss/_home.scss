@@ -1,5 +1,215 @@
 body {
+  $title-color: #72d0f4;
+  $bottom-border: #00bff0;
+  $page-width: 0 11%;
+  font-family: Ubuntu;
+  main {
+    .upper-main-home {
+      padding: $page-width;
+      .row {
+        .upper-main-home-image {
+          display: flex;
+          justify-content: flex-end;
+        }
+        .upper-main-home-title {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 40px;
+          .home-title {
+            font-weight: normal;
+            font-size: 38px;
+            color: #5b636b;
+          }
+          .home-text {
+            font-weight: normal;
+            font-size: 16px;
+            text-align: center;
+            color: #8b9297;
+            margin: 0;
+          }
+          &:hover {
+            cursor: default;
+          }
+        }
+      }
+    }
+    .live-main-home {
+      padding: $page-width;
+      .row {
+        .live-translation {
+          margin-bottom: 30px;
+          .live-content {
+            border-bottom: 4px solid $bottom-border;
+            .live-block {
+              display: flex;
+              justify-content: space-between;
+              background-color: $title-color;
+              padding: 10px 15px;
+              span {
+                display: flex;
+                align-items: center;
+                color: #ffffff;
+                line-height: 30px;
+              }
+              .live-block-title {
+                font-size: 18px;
+                text-transform: uppercase;
+                i {
+                  padding-left: 5px;
+                }
+              }
+              .live-block-room {
+                font-size: 11px;
+                font-weight: bolder;
+                text-transform: uppercase;
+              }
+            }
+            .live-image {
+              img {
+                width: 100%;
+              }
+            }
+            &:hover {
+              transform: scale(1.01);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .class-main-home {
+      padding: $page-width;
+      .row {
+        .all-classes {
+          .all-classes-title {
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            color: #00bff0;
+            font-size: 30px;
+            margin: 30px 0 20px 0;
+          }
+          .all-classes-content {
+            display: flex;
+            background-color: $title-color;
+            color: #ffffff;
+            .column-classes {
+              width: 50%;
+              .column-classes-row {
+                display: flex;
+                justify-content: space-between;
+                margin: 0 30px 10px 30px;
+                padding: 15px 0 10px 0;
+                border-bottom: 1px dotted #ffffff;
+                .row-name {
+                  text-transform: uppercase;
+                  span {
+                    font-size: 14px;
+                    font-weight: bolder;
+                    i {
+                      padding-right: 5px;
+                    }
+                  }
+                }
+                .row-social {
+                  text-transform: uppercase;
+                  i {
+                    margin: 0 5px;
+                  }
+                }
+                &:hover {
+                  cursor: pointer;
+                  transform: scale(1.01);
+                }
+              }
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              left: 50%;
+              bottom: 8%;
+              transform: rotate(0deg);
+              display: block;
+              width: 1px;
+              height: 180px;
+              background-color: #ffffff;
+            }
+          }
+        }
+        .membership-prices {
+          .membership-prices-title {
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            color: #00bff0;
+            font-size: 30px;
+            margin: 30px 0 20px 0;
+          }
+          .membership-prices-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #00bff0;
+            color: #ffffff;
+            padding: 0 10px;
+            max-height: 240px;
+            height: 100%;
+            .membership-title {
+              text-transform: uppercase;
+              font-size: 16px;
+              font-weight: bolder;
+              padding: 20px 0;
+            }
+            .membership-text {
+              font-size: 16px;
+              font-weight: lighter;
+              text-align: center;
+              padding-bottom: 10px;
+            }
+            .membership-button {
+              button {
+                background-color: transparent;
+                border: 1px solid #ffffff;
+                border-radius: 5px;
+                padding: 5px 20px;
+                color: #ffffff;
+                &:active, &:focus {
+                  outline: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
+
+@media screen and (max-width: 800px) {
+  body {
+    main {
+      .class-main-home {
+        .row {
+          .all-classes {
+            .all-classes-content {
+              display: flex;
+              flex-direction: column;
+              .column-classes {
+                width: 100%;
+              }
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 
